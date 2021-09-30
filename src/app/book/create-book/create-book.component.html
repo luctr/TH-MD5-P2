@@ -1,0 +1,21 @@
+<h1 style="text-align: center">Create Book!</h1>
+<mat-dialog-content class="mat-typography">
+  <form [formGroup]="booksForm" (ngSubmit)="create()">
+    <p>
+      <a>Name Book : </a>
+      <input type="text" formControlName="name" required>
+    </p>
+    <p>
+      <a>Author Book : </a>
+      <input type="text" formControlName="author" required>
+    </p>
+    <p>
+      <a>Description Book : </a>
+      <input type="text" formControlName="description" required>
+    </p>
+    <div mat-dialog-actions>
+      <button mat-button (click)="onNoClick()">No Create</button>
+      <button mat-button cdkFocusInitial >Create</button>
+    </div>
+  </form>
+</mat-dialog-content>

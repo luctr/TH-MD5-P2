@@ -1,0 +1,21 @@
+<p>update-book works!</p>
+<mat-dialog-content class="mat-typography">
+  <form [formGroup]="booksForm" >
+    <p>
+      <a>Name Book : </a>
+      <input type="text" formControlName="title" required>
+    </p>
+    <p>
+      <a>Author Book : </a>
+      <input type="text" formControlName="author" required>
+    </p>
+    <p>
+      <a>Description Book : </a>
+      <input type="text" formControlName="description" required>
+    </p>
+    <div mat-dialog-actions>
+      <button mat-button (click)="onNoClick()">No Update</button>
+      <button mat-button cdkFocusInitial (click)="update()">Update</button>
+    </div>
+  </form>
+</mat-dialog-content>

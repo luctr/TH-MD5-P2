@@ -1,0 +1,22 @@
+<p>delete-book works!</p>
+<mat-dialog-content class="mat-typography">
+  <form [formGroup]="booksForm" >
+    <p>
+      <a>Name Book : </a>
+      <input type="text" formControlName="title" readonly>
+    </p>
+    <p>
+      <a>Author Book : </a>
+      <input type="text" formControlName="author" readonly>
+    </p>
+    <p>
+      <a>Description Book : </a>
+      <textarea formControlName="description" readonly></textarea>
+
+    </p>
+    <div mat-dialog-actions>
+      <button mat-button (click)="onNoClick()">No Delete</button>
+      <button mat-button cdkFocusInitial (click)="delete()">Delete</button>
+    </div>
+  </form>
+</mat-dialog-content>

@@ -1,0 +1,22 @@
+<p>details-book works!</p>
+<mat-dialog-content class="mat-typography">
+  <form [formGroup]="booksForm" >
+    <p>
+      <a>Name Book : </a>
+      <input type="text" formControlName="title" readonly>
+    </p>
+    <p>
+      <a>Author Book : </a>
+      <input type="text" formControlName="author" readonly>
+    </p>
+    <p>
+      <a>Description Book : </a>
+      <textarea formControlName="description"></textarea>
+
+    </p>
+    <div mat-dialog-actions>
+      <button mat-button (click)="onNoClick()">Quit</button>
+<!--      <button mat-button cdkFocusInitial>Ok</button>-->
+    </div>
+  </form>
+</mat-dialog-content>
